@@ -46,6 +46,11 @@ export default withNuxt(
       ],
       'prettier/prettier': 'error',
       'jsdoc/require-jsdoc': 'off',
+      // We follow the descriptive-JSDoc standard (`@param name - desc`, `@returns desc`),
+      // not brace-typed tags (redundant in a strict-TS project).
+      'jsdoc/require-param-type': 'off',
+      'jsdoc/require-returns-type': 'off',
+      'jsdoc/require-returns-check': 'off',
     },
   },
   {

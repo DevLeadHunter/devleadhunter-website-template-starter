@@ -16,7 +16,9 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: false },
 
-  modules: ['@nuxt/eslint'],
+  // NOTE: no `modules` here. `@nuxt/eslint` is a dev-only tool and lives in
+  // `.playground/nuxt.config.ts` — declaring it in the layer would force every consumer
+  // (demo-host) to install it too. A consumed layer must only carry what renders it.
 
   components: [
     {
